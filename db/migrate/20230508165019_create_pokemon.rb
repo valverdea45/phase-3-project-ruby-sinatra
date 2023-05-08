@@ -4,5 +4,6 @@ class CreatePokemon < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :level
       t.timestamps
+    end
   end
 end
