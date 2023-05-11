@@ -2,9 +2,9 @@ puts "🌱 Seeding spices..."
 require "pry"
 
 # Seed your database here
-pokemon_names = ["Bulbasaur", "Squirtle", "Pikachu", "Mew", "Gengar", "Charizard"]
+# pokemon_names = ["Bulbasaur", "Squirtle", "Pikachu", "Mew", "Gengar", "Charizard"]
 
-pokemon_skills = ["Vine whip", "Watergun", "Tackle", "Mimic", "Curse", "Flamethrower"]
+# pokemon_skills = ["Vine whip", "Watergun", "Tackle", "Mimic", "Curse", "Flamethrower"]
 
 
 # pokemon_names.each do |pokemon|
