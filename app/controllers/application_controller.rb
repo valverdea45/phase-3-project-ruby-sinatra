@@ -33,4 +33,15 @@ class ApplicationController < Sinatra::Base
     pokemon.to_json(include: :pokemon_skills)
   end
 
+  post "/skills" do 
+    pokemon = Pokemon.find_by(id: params[:pokemonId])
+
+    pokemon.pokemon_skills.create(
+      name: params[:name],
+      description: params[:description],
+      power_points: params[:power_points]
+    )
+    pokemon.pokemon_skills.to_json
+  end
+
 end
