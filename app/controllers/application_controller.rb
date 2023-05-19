@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
 
   get "/pokemons" do
     pokemons = Pokemon.all
-    pokemons.to_json
+    pokemons.to_json(include: :pokemon_skills)
     # { message: "Good luck with your project!" }.to_json
   end
 
@@ -23,7 +23,14 @@ class ApplicationController < Sinatra::Base
       level: params[:level],
       sprite: params[:sprite]
     )
-    pokemon.to_json
+    # pokemon.pokemon_skills.create(
+    #   name: params[:skill_name],
+    #   description: params[:description],
+    #   power_points: params[:power_points]
+    # )
+    # binding.pry
+
+    pokemon.to_json(include: :pokemon_skills)
   end
 
 end
