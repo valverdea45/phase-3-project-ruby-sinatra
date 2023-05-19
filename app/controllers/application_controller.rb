@@ -56,4 +56,12 @@ class ApplicationController < Sinatra::Base
     skill.to_json
   end
 
+  delete "/skills/:id" do
+    skill = PokemonSkill.find(params[:id])
+
+    skill.destroy
+
+    skill.to_json
+  end
+
 end
