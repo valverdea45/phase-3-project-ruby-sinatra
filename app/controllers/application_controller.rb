@@ -64,4 +64,8 @@ class ApplicationController < Sinatra::Base
     skill.to_json
   end
 
+  patch "pokemons/:id" do
+
+  end
+
 end
