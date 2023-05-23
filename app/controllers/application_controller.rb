@@ -65,7 +65,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "pokemons/:id" do
-    skill = Pokemon.find(params[:id])
+    pokemon = Pokemon.find(params[:id])
     
   end
 
