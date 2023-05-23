@@ -70,7 +70,7 @@ class ApplicationController < Sinatra::Base
     pokemon.update(
       name: params[:name],
       level: params[:level],
-      
+      sprite: params[:sprite]
     )
 
   end
