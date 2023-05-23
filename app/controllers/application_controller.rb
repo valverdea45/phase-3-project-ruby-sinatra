@@ -79,7 +79,10 @@ class ApplicationController < Sinatra::Base
 
   delete "/pokemons/:id" do
     pokemon = Pokemon.find(params[:id])
-    
+
+    pokemon.destroy
+
+    pokemon.to_json
   end
 
 end
