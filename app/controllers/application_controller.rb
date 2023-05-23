@@ -66,7 +66,11 @@ class ApplicationController < Sinatra::Base
 
   patch "pokemons/:id" do
     pokemon = Pokemon.find(params[:id])
-    
+
+    pokemon.update(
+      
+    )
+
   end
 
 end
