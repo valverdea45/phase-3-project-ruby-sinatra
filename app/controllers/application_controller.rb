@@ -64,7 +64,7 @@ class ApplicationController < Sinatra::Base
     skill.to_json
   end
 
-  patch "pokemons/:id" do
+  patch "/pokemons/:id" do
     pokemon = Pokemon.find(params[:id])
 
     pokemon.update(
