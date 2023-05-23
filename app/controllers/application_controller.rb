@@ -68,6 +68,7 @@ class ApplicationController < Sinatra::Base
     pokemon = Pokemon.find(params[:id])
 
     pokemon.update(
+      name: params[:name],
       
     )
 
