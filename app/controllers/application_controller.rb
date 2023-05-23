@@ -73,6 +73,8 @@ class ApplicationController < Sinatra::Base
       sprite: params[:sprite]
     )
 
+    pokemon.to_json
+
   end
 
 end
