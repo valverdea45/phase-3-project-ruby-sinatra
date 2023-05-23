@@ -77,4 +77,8 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  delete "/pokemons/:id" do
+
+  end
+
 end
