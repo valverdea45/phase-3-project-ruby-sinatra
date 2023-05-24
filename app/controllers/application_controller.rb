@@ -33,15 +33,18 @@ class ApplicationController < Sinatra::Base
     pokemon.to_json(include: :pokemon_skills)
   end
 
+  #updated 
+
   post "/skills" do 
     pokemon = Pokemon.find_by(id: params[:pokemonId])
 
-    pokemon.pokemon_skills.create(
+    skill = pokemon.pokemon_skills.create(
       name: params[:name],
       description: params[:description],
       power_points: params[:power_points]
     )
-    pokemon.pokemon_skills.to_json
+
+    skill.to_json
   end
 
   patch "/skills/:id" do 
@@ -55,6 +58,8 @@ class ApplicationController < Sinatra::Base
 
     skill.to_json
   end
+
+  # doesnt need to send anything back
 
   delete "/skills/:id" do
     skill = PokemonSkill.find(params[:id])
